@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dbUpdater</title>
+</head>
+<body>
+    <script type="text/javascript" src="js/script.js"></script>
+    <p>dbUpdater</p>
+
+    <form action="controller.php", method="POST">
+        <div>
+            <input type="text", placeholder="IP ex: 127.0.0.1", name="ip"><br>
+
+            <input type="text", placeholder="usuário", name="user"><br>
+            <input type="password", placeholder="senha", name="pw"><br>
+            <input type="text", placeholder="nome do banco de dados", name="dbName"><br>
+            <input type="text", placeholder="nome da tabela", name="tblName"><br><br>
+                <input type="text", placeholder="nome da coluna", name="arraycolumn[]">
+                <input list="types", name="types[]", placeholder="tipo da coluna">
+                <datalist id="types">
+                    <option value="varchar">
+                    <option value="name">
+                    <option value="int">
+                    <option value="date">
+                </datalist>
+                <input type="number", placeholder="comprimento", name="clnLen[]">
+                <input type="button", value="+", id="maisUma", onclick = "addColumn()">
+                <input type="button", value="data", id="maisUmaData", onclick = "addColumnData()">
+            <div id="newColumn"></div>
+            <br>
+            <input type="number", placeholder="numero de linhas", name="numOfRows"><br>
+
+            <input type="submit">
+
+        </div>
+    </form>
+    <p>by Bruno Vais Sampaio</p> 
+</body>
+</html>
